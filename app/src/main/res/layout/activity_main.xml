@@ -21,29 +21,35 @@
         android:inputType="textPersonName"
         tools:ignore="Autofill,LabelFor" />
 
-    <RadioButton
-        android:id="@+id/radioPlus"
+    <RadioGroup
+        android:id="@+id/radio"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/plus" />
+        android:layout_height="wrap_content">
 
-    <RadioButton
-        android:id="@+id/radioMinus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/minus" />
+        <RadioButton
+            android:id="@+id/radioPlus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/plus" />
 
-    <RadioButton
-        android:id="@+id/radioMulty"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/multy" />
+        <RadioButton
+            android:id="@+id/radioMinus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/minus" />
 
-    <RadioButton
-        android:id="@+id/radioDevide"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/devide" />
+        <RadioButton
+            android:id="@+id/radioMulty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/multy" />
+
+        <RadioButton
+            android:id="@+id/radioDevide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/devide" />
+    </RadioGroup>
 
     <TextView
         android:id="@+id/text2"
@@ -64,6 +70,7 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="onClick"
         android:text="@string/result" />
 
     <TextView
