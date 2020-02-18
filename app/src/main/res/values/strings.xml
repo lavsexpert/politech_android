@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Calculator321</string>
+    <string name="app_name">Калькулятор</string>
     <string name="text1">Первое число</string>
     <string name="text2">Второе число</string>
     <string name="plus">+</string>
