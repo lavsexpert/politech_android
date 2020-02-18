@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/text1"
+        android:textColor="@android:color/black"
         android:textSize="36sp" />
 
     <EditText
@@ -19,6 +20,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textSize="36sp"
         tools:ignore="Autofill,LabelFor" />
 
     <RadioGroup
@@ -31,6 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/plus"
+            android:textColor="@android:color/black"
             android:textSize="36sp" />
 
         <RadioButton
@@ -38,6 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/minus"
+            android:textColor="@android:color/black"
             android:textSize="36sp" />
 
         <RadioButton
@@ -45,6 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/multy"
+            android:textColor="@android:color/black"
             android:textSize="36sp" />
 
         <RadioButton
@@ -52,6 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/devide"
+            android:textColor="@android:color/black"
             android:textSize="36sp" />
     </RadioGroup>
 
@@ -60,6 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/text2"
+        android:textColor="@android:color/black"
         android:textSize="36sp" />
 
     <EditText
@@ -68,12 +75,14 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textSize="36sp"
         tools:ignore="Autofill,LabelFor" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"
         android:onClick="onClick"
         android:text="@string/button"
         android:textSize="36sp" />
