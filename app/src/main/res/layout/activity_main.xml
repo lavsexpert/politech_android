@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="@string/text1"
+        android:textColor="@color/colorPrimary"
         android:textSize="36sp" />
 
     <EditText
@@ -61,6 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="@string/text2"
+        android:textColor="@color/colorPrimary"
         android:textSize="36sp" />
 
     <EditText
@@ -77,6 +79,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="@color/colorPrimary"
         android:onClick="onClick"
         android:text="@string/button" />
 
