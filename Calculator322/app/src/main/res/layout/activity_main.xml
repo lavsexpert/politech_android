@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/text1"
+        android:textColor="@color/colorPrimary"
+        android:textSize="36sp" />
+
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:ignore="Autofill,LabelFor" />
+
+    <RadioGroup
+        android:id="@+id/radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <RadioButton
+            android:id="@+id/radioPlus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radioPlus" />
+
+        <RadioButton
+            android:id="@+id/radioMinus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radioMinus" />
+
+        <RadioButton
+            android:id="@+id/radioMulty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radioMulty" />
+
+        <RadioButton
+            android:id="@+id/radioDevide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/radioDevide" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/text2"
+        android:textColor="@color/colorPrimary"
+        android:textSize="36sp" />
+
+    <EditText
+        android:id="@+id/edit2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:ignore="Autofill,LabelFor" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:onClick="onClick"
+        android:text="@string/button" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="36sp" />
+</LinearLayout>

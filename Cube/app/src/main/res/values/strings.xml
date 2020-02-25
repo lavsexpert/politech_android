@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Cube</string>
+    <string name="buttonRandom">Кинуть кубик</string>
+    <string name="buttonAbout">О создателях</string>
+    <string name="about">Это сделал я</string>
+    <string name="photo">Фотография</string>
+</resources>
