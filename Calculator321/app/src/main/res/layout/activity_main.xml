@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text1"
+        android:textColor="@android:color/black"
+        android:textSize="36sp" />
+
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="36sp"
+        tools:ignore="Autofill,LabelFor" />
+
+    <RadioGroup
+        android:id="@+id/radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioPlus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/plus"
+            android:textColor="@android:color/black"
+            android:textSize="36sp" />
+
+        <RadioButton
+            android:id="@+id/radioMinus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/minus"
+            android:textColor="@android:color/black"
+            android:textSize="36sp" />
+
+        <RadioButton
+            android:id="@+id/radioMulty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/multy"
+            android:textColor="@android:color/black"
+            android:textSize="36sp" />
+
+        <RadioButton
+            android:id="@+id/radioDevide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/devide"
+            android:textColor="@android:color/black"
+            android:textSize="36sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text2"
+        android:textColor="@android:color/black"
+        android:textSize="36sp" />
+
+    <EditText
+        android:id="@+id/edit2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="36sp"
+        tools:ignore="Autofill,LabelFor" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="onClick"
+        android:text="@string/button"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="36sp" />
+</LinearLayout>
