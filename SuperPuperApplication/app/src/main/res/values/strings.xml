@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Super Puper Application</string>
+    <string name="button">Кнопочка</string>
+    <string name="welcome">Нажали кнопочку!</string>
+    <string name="author">Сделал Сергей</string>
+    <string name="photo">Фото разработчика</string>
+    <string name="about">О приложении</string>
+</resources>
