@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Калькулятор</string>
+    <string name="text1">Первое число</string>
+    <string name="radioPlus">+</string>
+    <string name="radioMinus">-</string>
+    <string name="radioMulty">*</string>
+    <string name="radioDevide">/</string>
+    <string name="button">Вычислить</string>
+    <string name="text2">Второе число</string>
+</resources>

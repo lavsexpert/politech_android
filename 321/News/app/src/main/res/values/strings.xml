@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">News</string>
+    <string name="button">Добавить</string>
+    <string name="buttonEdit">Изменить</string>
+    <string name="buttonDelete">Удалить</string>
+    <string name="titleEdit">Заголовок новости</string>
+    <string name="textEdit">Текст новости</string>
+    <string name="buttonSave">Сохранить</string>
+</resources>

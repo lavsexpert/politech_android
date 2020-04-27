@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">List</string>
+    <string name="button">Добавить</string>
+    <string name="buttonSave">Сохранить</string>
+    <string name="buttonEdit">Изменить</string>
+    <string name="buttonDelete">Удалить</string>
+</resources>

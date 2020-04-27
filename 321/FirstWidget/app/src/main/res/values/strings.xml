@@ -1,0 +1,4 @@
+<resources>
+    <string name="widget_name">Первый виджет</string>
+    <string name="widget_text">Текст виджета</string>
+</resources>
