@@ -16,7 +16,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     private Context context;
     private List<ListItem> list;
 
-    public ListAdapter(Context context, List<ListItem> list){
+    ListAdapter(Context context, List<ListItem> list){
         this.context = context;
         this.list = list;
     }
@@ -32,7 +32,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final ListItem item = list.get(position);
-        holder.textID.setText(item.id);
+        holder.textID.setText(String.valueOf(item.id));
         holder.textName.setText(item.name);
         holder.textEmail.setText(item.email);
     }
