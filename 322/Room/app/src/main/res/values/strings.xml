@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Room</string>
+    <string name="editName">Имя</string>
+    <string name="edtiEmail">E-mail</string>
+    <string name="buttonAdd">Добавить</string>
+    <string name="buttonRead">Прочитать</string>
+    <string name="buttonClear">Очистить</string>
+</resources>
