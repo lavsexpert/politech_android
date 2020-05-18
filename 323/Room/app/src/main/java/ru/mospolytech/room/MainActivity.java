@@ -22,22 +22,38 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onAddClick(View view){
-        User user = new User();
-        user.name = editName.getText().toString();
-        user.email = editEmail.getText().toString();
-        App.app.db.userDao().insert(user);
+        Thread dbThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                User user = new User();
+                user.name = editName.getText().toString();
+                user.email = editEmail.getText().toString();
+                App.app.db.userDao().insert(user);
+            }
+        });
+        dbThread.start();
     }
 
     public void onReadClick(View view){
-        List<User> users = App.app.db.userDao().readAll();
-        for (User user: users) {
-            Log.d("SQL", "ID = " + user.id + "Name = " + user.name + "Email = " + user.email);
-        }
+        Thread dbThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                List<User> users = App.app.db.userDao().readAll();
+                for (User user: users) {
+                    Log.d("SQL", "ID = " + user.id + "Name = " + user.name + "Email = " + user.email);
+                }
+            }
+        });
+        dbThread.start();
     }
 
     public void onClearClick(View view){
-        App.app.db.userDao().deleteAll();
+        Thread dbThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                App.app.db.userDao().deleteAll();
+            }
+        });
+        dbThread.start();
     }
-
-
 }
