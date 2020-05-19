@@ -20,6 +20,9 @@ public interface UserDao {
     @Query("SELECT COUNT(id) FROM user")
     int count();
 
+    @Query("SELECT * FROM user WHERE id = :id")
+    User readByID(int id);
+
     @Query("SELECT * FROM user WHERE name = :name")
     User readByName(String name);
 

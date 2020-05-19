@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     UserAdapter adapter;
     List<User> list;
     static Handler handler;
+    public int position;
 
     @SuppressLint("HandlerLeak")
     @Override
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         editName = findViewById(R.id.editName);
         editEmail = findViewById(R.id.editEmail);
+        position = 0;
         list = new ArrayList<>();
         adapter = new UserAdapter(this, list);
         recyclerView = findViewById(R.id.list);
@@ -64,6 +66,22 @@ public class MainActivity extends AppCompatActivity {
                 user.email = editEmail.getText().toString();
                 App.app.db.userDao().insert(user);
                 list.add(user);
+                handler.sendEmptyMessage(0);
+            }
+        });
+        dbThread.start();
+    }
+
+    public void onUpdateClick(View view){
+        Thread dbThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                User user = App.app.db.userDao().readByID(position);
+                user.id = position;
+                user.name = editName.getText().toString();
+                user.email = editEmail.getText().toString();
+                list.set(position, user);
+                App.app.db.userDao().update(user);
                 handler.sendEmptyMessage(0);
             }
         });
