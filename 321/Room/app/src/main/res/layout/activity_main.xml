@@ -39,6 +39,12 @@
         android:text="@string/buttonRead" />
 
     <Button
+        android:id="@+id/buttonUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonUpdate" />
+
+    <Button
         android:id="@+id/buttonClear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
