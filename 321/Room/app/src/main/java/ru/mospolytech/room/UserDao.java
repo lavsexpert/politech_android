@@ -14,6 +14,9 @@ public interface UserDao {
     @Insert
     void insert(User user);
 
+    @Query("SELECT COUNT(id) FROM users")
+    int count();
+
     @Query("SELECT * FROM users")
     List<User> readAll();
 

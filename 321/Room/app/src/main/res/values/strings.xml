@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SQL</string>
+    <string name="app_name">Room</string>
     <string name="editName">Имя</string>
     <string name="editEmail">E-mail</string>
     <string name="buttonAdd">Добавить</string>
