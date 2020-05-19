@@ -19,7 +19,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     private Context context;
     List<User> list;
-    int selectedPosition;
     private View selected;
 
     UserAdapter(Context context, List<User> list){
@@ -50,6 +49,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
                 v.setBackgroundColor(context.getColor(R.color.colorAccent));
                 selected = v;
                 User user = list.get(position);
+                ((MainActivity) context).position = position;
                 ((MainActivity) context).editName.setText(user.name);
                 ((MainActivity) context).editEmail.setText(user.email);
             }

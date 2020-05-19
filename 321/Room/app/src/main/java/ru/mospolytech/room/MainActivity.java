@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     UserAdapter adapter;
     List<User> list;
     static Handler handler;
+    int position;
 
     @SuppressLint("HandlerLeak")
     @Override
@@ -81,6 +82,30 @@ public class MainActivity extends AppCompatActivity {
                 for (User user: list) {
                     Log.d("Polytech", "ID = " + user.id
                     + ", name = " + user.name + ", email = " + user.email);
+                }
+                handler.sendEmptyMessage(0);
+            }
+        });
+        dbThread.start();
+    }
+
+    public void onUpdateClick(View view){
+        Thread dbThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                User user = App.db.userDao().readUser(position);
+                if (user != null){
+                    user.name = editName.getText().toString();
+                    user.email = editEmail.getText().toString();
+                    App.db.userDao().update(user);
+                    list.set(user.id, user);
+                } else {
+                    user = new User();
+                    user.id = App.db.userDao().count();
+                    user.name = editName.getText().toString();
+                    user.email = editEmail.getText().toString();
+                    App.db.userDao().insert(user);
+                    list.add(user);
                 }
                 handler.sendEmptyMessage(0);
             }

@@ -42,6 +42,7 @@
         android:id="@+id/buttonUpdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="onUpdateClick"
         android:text="@string/buttonUpdate" />
 
     <Button
