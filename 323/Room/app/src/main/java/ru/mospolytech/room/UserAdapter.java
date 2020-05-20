@@ -34,7 +34,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-        ((MainActivity)context).position = position;
         User user = list.get(position);
         holder.textID.setText(String.valueOf(user.id));
         holder.textName.setText(user.name);
@@ -46,6 +45,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
                 if (selected != null){
                     selected.setBackgroundColor(Color.WHITE);
                 }
+                ((MainActivity)context).position = position;
                 v.setBackgroundColor(Color.CYAN);
                 selectedPosition = position;
                 selected = v;
