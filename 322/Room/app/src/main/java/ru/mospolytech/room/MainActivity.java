@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     UserAdapter adapter;
     List<User> list;
     static Handler handler;
+    int position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,19 @@ public class MainActivity extends AppCompatActivity {
                 editEmail.setText("");
             }
         };
+        Thread dbThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                list.clear();
+                list = App.db.userDao().readAll();
+                for (User user: list) {
+                    Log.d("Polytech", "ID = "+user.id
+                            + ", name = " + user.name + ", email = " + user.email);
+                }
+                handler.sendEmptyMessage(0);
+            }
+        });
+        dbThread.start();
     }
 
     public void onAddClick(View view){
@@ -70,6 +84,30 @@ public class MainActivity extends AppCompatActivity {
                 for (User user: list) {
                     Log.d("Polytech", "ID = "+user.id
                     + ", name = " + user.name + ", email = " + user.email);
+                }
+                handler.sendEmptyMessage(0);
+            }
+        });
+        dbThread.start();
+    }
+
+    public void onUpdateClick(View view){
+        Thread dbThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                User user = App.db.userDao().read(position);
+                if (user == null){
+                    user = new User();
+                    user.id = App.db.userDao().count();
+                    user.name = editName.getText().toString();
+                    user.email = editEmail.getText().toString();
+                    App.db.userDao().create(user);
+                    list.add(user);
+                } else {
+                    user.name = editName.getText().toString();
+                    user.email = editEmail.getText().toString();
+                    App.db.userDao().update(user);
+                    list.set(position, user);
                 }
                 handler.sendEmptyMessage(0);
             }

@@ -20,8 +20,8 @@ public interface UserDao {
     @Query("SELECT * FROM users")
     List<User> readAll();
 
-    @Query("SELECT * FROM users WHERE name = :name LIMIT 1")
-    User readByName(String name);
+    @Query("SELECT * FROM users WHERE id = :id LIMIT 1")
+    User read(int id);
 
     @Update
     void update(User user);

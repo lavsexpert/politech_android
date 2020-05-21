@@ -5,4 +5,5 @@
     <string name="buttonAdd">Добавить</string>
     <string name="buttonRead">Прочитать</string>
     <string name="buttonClear">Очистить</string>
+    <string name="buttonUpdate">Изменить</string>
 </resources>
